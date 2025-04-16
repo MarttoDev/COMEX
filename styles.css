@@ -1,0 +1,285 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    scroll-margin-top: 80px;
+  }
+  
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: #ffffff;
+
+
+}
+  
+/* Estilos del Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+header.transparent {
+    background-color: transparent;
+    box-shadow: none;
+}
+  
+header.scrolled {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+.logo-nav {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el logo y el nav */
+    justify-content: space-between;
+    width: 100%; /* Asegura que ambos elementos estén alineados */
+}
+
+.logo {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 20px; /* Espacio entre el logo y el menú */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Alinea los enlaces a la derecha */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #adadad;
+}
+
+
+#inicio {
+    position: relative;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 250px 20px;
+    z-index: 1;
+}
+
+#inicio::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/ian-taylor-HjBOmBPbi9k-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px); 
+    z-index: 0;
+    opacity: 0.5; 
+}
+
+#inicio > * {
+    position: relative;
+    z-index: 2; 
+}
+
+#inicio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+#inicio p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+section {
+    padding: 60px 20px; /* Un poco más de espaciado en cada sección */
+}
+
+footer {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px;
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos adicionales para el botón en el header (si lo tienes) */
+.btn {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #002244;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FFC300;
+}
+
+#servicios {
+    margin-top: 10px;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .servicios-contenido {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .servicios-lista {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+  }
+  
+  .servicios-lista details {
+    background: #f5f5f5;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .servicios-lista details[open] {
+    background: #e0f7fa;
+  }
+  
+  .servicios-lista summary {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .img-servicios {
+    flex: 1;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  
+
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 999;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    
+}
+
+.whatsapp-float img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+#contacto {
+    padding: 50px;
+    background-color: #f9f9f900;
+    color: #333;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #002244;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #002244;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .submit-btn {
+    background-color: #002244;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #005fa3;
+}
