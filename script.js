@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const startPosition = window.pageYOffset;
         
         // Establecer la duración de la animación (en milisegundos)
-        const duration = 300;
+        const duration = 350;
         
         let startTime = null;
 
